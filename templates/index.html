@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="jumbotron text-center">
+    <h3>Anasayfa</h3>
+    <p>Dünyanın en profesyonel olmayan web sayfası...
+</div>
+<p>
+    {% if request.user.is_authenticated %}
+        Giriş Yapılmış
+    {% else %}
+        Giriş Yapılmamış
+    {% endif %}
+</p>
+
+{% endblock body %}
